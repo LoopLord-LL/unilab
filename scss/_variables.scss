@@ -1,0 +1,27 @@
+$secondary-text-color: rgba(255, 255, 255, 1);
+$primary-text-color: rgba(0, 0, 0, 1);
+
+$bg-color: rgba(0, 0, 0, 1);
+
+@mixin font-style($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flex-style($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin button-parameters($background, $border) {
+  background: $background;
+  border: $border;
+}
+// @mixin button(){
+//   width: 40px;
+//   height: 30px;
+//   border: none;
+//   background: none;
+// }

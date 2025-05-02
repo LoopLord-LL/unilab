@@ -1,0 +1,55 @@
+.top-banner {
+  @include flex-style(row, center, center);
+  background-color: $bg-color;
+  @include font-style($secondary-text-color, 14px, 500);
+  padding: 10px 0;
+  position: relative;
+  p {
+    a {
+      color: rgba(255, 255, 255, 1);
+      line-height: 100%;
+      font-weight: 500;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+  }
+  button {
+    @include flex-style(row, center, center);
+    position: absolute;
+    right: 100px;
+    @include button-parameters(none, none);
+    cursor: pointer;
+  }
+}
+.main-header {
+  @include flex-style(row, center, center);
+  gap: 40px;
+  h1 a {
+    // font-family: FONTSPRING DEMO - Integral CF Bold;
+    font-weight: 700;
+    font-size: 32px;
+    @include font-style($primary-text-color, 32px, 700);
+    letter-spacing: 0%;
+  }
+  .navigation {
+    padding-left: 100px;
+    ul {
+      @include flex-style(row, center, center);
+      gap: 24px;
+      li a {
+        @include font-style($primary-text-color, 16px, 500);
+        line-height: 100%;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  nav-icons {
+    @include flex-style(row, center, center);
+    gap: 14px;
+  }
+}
