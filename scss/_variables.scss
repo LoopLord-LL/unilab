@@ -3,7 +3,11 @@ $secondary-text-color: rgba(255, 255, 255, 1);
 $third-text-color: rgba(0, 0, 0, 0.6);
 $bg-color: rgba(0, 0, 0, 1);
 
-@mixin font-style($font-family,$color, $size, $weight) {
+$product-list-gap: 20px;
+$product-details-gap: 8px;
+$card-bg-color: rgba(240, 238, 237, 1);
+
+@mixin font-style($font-family, $color, $size, $weight) {
   font-family: $font-family;
   color: $color;
   font-size: $size;
@@ -16,9 +20,11 @@ $bg-color: rgba(0, 0, 0, 1);
   justify-content: $justify;
   align-items: $align;
 }
- 
+
 @mixin button-parameters($background, $border) {
   background: $background;
   border: $border;
+  padding: 16px 54px;
+  border-radius: 62px;
   cursor: pointer;
 }

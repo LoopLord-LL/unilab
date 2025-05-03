@@ -29,8 +29,6 @@
     .hero-button {
       @include button-parameters($bg-color, none);
       @include font-style("Satoshi-Variable", $secondary-text-color, 16px, 500);
-      padding: 16px 54px;
-      border-radius: 62px;
     }
 
     .hero-stats {
