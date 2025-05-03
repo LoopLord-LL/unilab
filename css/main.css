@@ -221,6 +221,17 @@
   left: 780px;
 }
 
+.partner-logos {
+  padding: 42px 100px;
+  background-color: rgb(0, 0, 0);
+}
+.partner-logos .logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;

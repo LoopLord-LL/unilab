@@ -1,0 +1,7 @@
+.partner-logos {
+  padding: 42px 100px;
+  background-color: $bg-color;
+  .logo-wrapper {
+    @include flex-style(row, space-between, center);
+  }
+}

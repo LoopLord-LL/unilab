@@ -16,13 +16,7 @@ $bg-color: rgba(0, 0, 0, 1);
   justify-content: $justify;
   align-items: $align;
 }
-
-// Remove the two-parameter version of button-parameters
-// @mixin button-parameters($background, $border) {
-//   background: $background;
-//   border: $border;
-// }
-
+ 
 @mixin button-parameters($background, $border) {
   background: $background;
   border: $border;
