@@ -1,9 +1,10 @@
-$secondary-text-color: rgba(255, 255, 255, 1);
 $primary-text-color: rgba(0, 0, 0, 1);
-
+$secondary-text-color: rgba(255, 255, 255, 1);
+$third-text-color: rgba(0, 0, 0, 0.6);
 $bg-color: rgba(0, 0, 0, 1);
 
-@mixin font-style($color, $size, $weight) {
+@mixin font-style($font-family,$color, $size, $weight) {
+  font-family: $font-family;
   color: $color;
   font-size: $size;
   font-weight: $weight;
@@ -15,16 +16,15 @@ $bg-color: rgba(0, 0, 0, 1);
   justify-content: $justify;
   align-items: $align;
 }
+
+// Remove the two-parameter version of button-parameters
+// @mixin button-parameters($background, $border) {
+//   background: $background;
+//   border: $border;
+// }
+
 @mixin button-parameters($background, $border) {
   background: $background;
   border: $border;
+  cursor: pointer;
 }
-@mixin font-family($font, $size, $weight){
-  font-family: $font;
-}
-// @mixin button(){
-//   width: 40px;
-//   height: 30px;
-//   border: none;
-//   background: none;
-// }

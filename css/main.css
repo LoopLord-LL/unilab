@@ -4,13 +4,20 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: 500;
   padding: 10px 0;
   position: relative;
 }
+.top-banner p {
+  font-family: "Satoshi-Variable";
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+}
 .top-banner p a {
+  font-family: "Satoshi-Variable";
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
   color: rgb(255, 255, 255);
   line-height: 100%;
   font-weight: 500;
@@ -30,6 +37,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  cursor: pointer;
 }
 
 .main-header {
@@ -47,9 +55,6 @@
   font-weight: 700;
   letter-spacing: 0%;
 }
-.main-header .navigation {
-  padding-left: 100px;
-}
 .main-header .navigation ul {
   display: flex;
   flex-direction: row;
@@ -58,11 +63,10 @@
   gap: 24px;
 }
 .main-header .navigation ul li a {
+  font-family: "Satoshi-Variable";
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 500;
-  font-family: "Satoshi-Variable";
-  line-height: 100%;
 }
 .main-header .navigation ul li a:hover {
   text-decoration: underline;
@@ -87,6 +91,7 @@
   border: none;
   background: rgb(240, 240, 240);
   padding: 12px 52px;
+  font-family: "Satoshi-Variable";
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 500;
@@ -94,6 +99,7 @@
 .main-header .search button {
   background: rgb(0, 0, 0);
   border: none;
+  cursor: pointer;
   cursor: pointer;
 }
 .main-header .nav-icons {
@@ -107,7 +113,6 @@
 @font-face {
   font-family: "Satoshi-Variable";
   src: url("../assets/font/Satoshi_Complete/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf");
-  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
@@ -118,10 +123,112 @@
   font-display: swap;
   font-style: normal;
 }
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  background-color: rgb(242, 240, 241);
+  width: 100%;
+  max-width: 100vw;
+}
+.hero .hero-content,
+.hero .hero-image {
+  flex: 1;
+  max-width: 50%;
+}
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+.hero .hero-content h2 {
+  font-family: "Integral-CF-bold";
+  color: rgb(0, 0, 0);
+  font-size: 64px;
+  font-weight: 700;
+}
+.hero .hero-content p {
+  font-family: "Satoshi-Variable";
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.hero .hero-content .hero-button {
+  background: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-family: "Satoshi-Variable";
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 54px;
+  border-radius: 62px;
+}
+.hero .hero-content .hero-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.hero .hero-content .hero-stats .middle-stat {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 32px;
+}
+.hero .hero-content .hero-stats .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero .hero-content .hero-stats .stat strong {
+  font-family: "Satoshi-Variable";
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.hero .hero-content .hero-stats .stat span {
+  font-family: "Satoshi-Variable";
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.hero .hero-image .fashion-couple {
+  width: 100%;
+  object-fit: cover;
+}
+.hero .hero-image .big-star {
+  position: absolute;
+  top: 134px;
+  right: 120px;
+}
+.hero .hero-image .small-star {
+  position: absolute;
+  top: 368px;
+  left: 780px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {

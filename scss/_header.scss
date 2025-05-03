@@ -1,11 +1,12 @@
 .top-banner {
   @include flex-style(row, center, center);
   background-color: $bg-color;
-  @include font-style($secondary-text-color, 14px, 500);
   padding: 10px 0;
   position: relative;
   p {
+    @include font-style("Satoshi-Variable", $secondary-text-color, 14px, 500);
     a {
+      @include font-style("Satoshi-Variable", $secondary-text-color, 14px, 500);
       color: rgba(255, 255, 255, 1);
       line-height: 100%;
       font-weight: 500;
@@ -29,19 +30,15 @@
   gap: 40px;
   padding: 24px 100px;
   h1 a {
-    font-family: "Integral-CF-bold";
-    @include font-style($primary-text-color, 32px, 700);
+    @include font-style("Integral-CF-bold", $primary-text-color, 32px, 700);
     letter-spacing: 0%;
   }
   .navigation {
-    padding-left: 100px;
     ul {
       @include flex-style(row, center, center);
       gap: 24px;
       li a {
-        @include font-style($primary-text-color, 16px, 500);
-        font-family: "Satoshi-Variable";
-        line-height: 100%;
+        @include font-style("Satoshi-Variable", $primary-text-color, 16px, 500);
         &:hover {
           text-decoration: underline;
         }
@@ -64,7 +61,7 @@
       border: none;
       background: rgba(240, 240, 240, 1);
       padding: 12px 52px;
-      @include font-style($primary-text-color, 16px, 500);
+      @include font-style("Satoshi-Variable", $primary-text-color, 16px, 500);
     }
     button {
       @include button-parameters($bg-color, none);
