@@ -35,13 +35,13 @@
 .main-header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
+  padding: 24px 100px;
 }
 .main-header h1 a {
-  font-weight: 700;
-  font-size: 32px;
+  font-family: "Integral-CF-bold";
   color: rgb(0, 0, 0);
   font-size: 32px;
   font-weight: 700;
@@ -61,12 +61,42 @@
   color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 500;
+  font-family: "Satoshi-Variable";
   line-height: 100%;
 }
 .main-header .navigation ul li a:hover {
   text-decoration: underline;
 }
-.main-header nav-icons {
+.main-header .search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+.main-header .search img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-header .search input {
+  width: 578px;
+  border-radius: 62px;
+  border: none;
+  background: rgb(240, 240, 240);
+  padding: 12px 52px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-header .search button {
+  background: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.main-header .nav-icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,6 +104,20 @@
   gap: 14px;
 }
 
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../assets/font/Satoshi_Complete/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Integral-CF-bold";
+  src: url("../assets/font/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-bold.otf");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;

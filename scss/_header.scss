@@ -25,12 +25,11 @@
   }
 }
 .main-header {
-  @include flex-style(row, center, center);
+  @include flex-style(row, space-between, center);
   gap: 40px;
+  padding: 24px 100px;
   h1 a {
-    // font-family: FONTSPRING DEMO - Integral CF Bold;
-    font-weight: 700;
-    font-size: 32px;
+    font-family: "Integral-CF-bold";
     @include font-style($primary-text-color, 32px, 700);
     letter-spacing: 0%;
   }
@@ -41,6 +40,7 @@
       gap: 24px;
       li a {
         @include font-style($primary-text-color, 16px, 500);
+        font-family: "Satoshi-Variable";
         line-height: 100%;
         &:hover {
           text-decoration: underline;
@@ -48,7 +48,31 @@
       }
     }
   }
-  nav-icons {
+  .search {
+    @include flex-style(row, center, center);
+    position: relative;
+    gap: 10px;
+    img {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    input {
+      width: 578px;
+      border-radius: 62px;
+      border: none;
+      background: rgba(240, 240, 240, 1);
+      padding: 12px 52px;
+      @include font-style($primary-text-color, 16px, 500);
+    }
+    button {
+      @include button-parameters($bg-color, none);
+      cursor: pointer;
+    }
+  }
+
+  .nav-icons {
     @include flex-style(row, center, center);
     gap: 14px;
   }
