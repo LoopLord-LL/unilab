@@ -1,0 +1,197 @@
+.offers-banner {
+  @include flex-style(row, space-between, center);
+  width: 100%;
+  width: calc(100% - 200px);
+  margin: 0 auto;
+  background-color: $bg-color;
+  padding: 44px 64px;
+  border-radius: 20px;
+  gap: 32px;
+  transform: translateY(50%);
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  .offer-text {
+    @include font-style("Integral-CF-bold", $primary-text-color, 40px, 700);
+    color: $secondary-text-color;
+    width: 50%;
+  }
+
+  .info-container {
+    @include flex-style(column, center, flex-end);
+    position: relative;
+    width: 50%;
+    gap: 14px;
+
+    input {
+      width: 100%;
+      padding: 12px 50px;
+      border-radius: 32px;
+      background-color: $secondary-text-color;
+      border: none;
+    }
+
+    .inbox-icon {
+      position: absolute;
+      left: 16px;
+      top: 21%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .subscribe-button {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 32px;
+      background-color: $secondary-text-color;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 32px;
+    gap: 24px;
+    transform: translateY(30%);
+
+    .offer-text,
+    .info-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .info-container {
+      align-items: center;
+    }
+  }
+}
+
+footer {
+  @include flex-style(column, center, flex-start);
+  padding: 140px 100px 50px;
+  background-color: rgba(240, 240, 240, 1);
+
+  .link-wrapper {
+    @include flex-style(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 112px;
+    width: 100%;
+    margin-top: 80px;
+
+    .social-links {
+      @include flex-style(column, center, flex-start);
+      gap: 35px;
+      max-width: 248px;
+
+      .title {
+        @include font-style("Integral-CF-bold", $primary-text-color, 32px, 700);
+      }
+
+      p {
+        @include font-style("Satoshi-Variable", $third-text-color, 14px, 400);
+      }
+
+      .link-list {
+        @include flex-style(row, flex-start, center);
+        flex-wrap: wrap;
+        gap: 12px;
+
+        a {
+          img {
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .company,
+    .help,
+    .faq,
+    .recources {
+      @include flex-style(column, flex-end, flex-start);
+      gap: 26px;
+
+      h4 {
+        @include font-style("Satoshi", $primary-text-color, 16px, 500);
+        line-height: 18px;
+        letter-spacing: 3px;
+        font-family: "Satoshi";
+      }
+
+      a {
+        @include font-style("Satoshi-Variable", $third-text-color, 16px, 400);
+        transition: text-decoration 0.2s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .dividing-line {
+    margin: 20px 0 !important;
+  }
+
+  .footer-copyright {
+    @include flex-style(row, space-between, center);
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    span {
+      @include font-style("Satoshi-Variable", $third-text-color, 14px, 400);
+    }
+
+    .payment-cards {
+      @include flex-style(row, flex-start, center);
+      gap: 16px;
+      img {
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 80px 20px 40px;
+
+    .offers-banner {
+      flex-direction: column;
+      padding: 32px;
+      gap: 24px;
+
+      .offer-text,
+      .info-container {
+        width: 100%;
+        text-align: center;
+      }
+
+      .info-container {
+        align-items: center;
+      }
+    }
+
+    .link-wrapper {
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .footer-copyright {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+}
