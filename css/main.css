@@ -242,6 +242,55 @@
   align-items: center;
 }
 
+.outfit-categories {
+  background-color: rgb(240, 240, 240);
+  padding: 70px 104px;
+  margin: 0 100px;
+  border-radius: 40px;
+}
+.outfit-categories h3 {
+  font-family: "Integral-CF-bold";
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.outfit-categories .outfit-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 64px;
+}
+.outfit-categories .outfit-lists .top-outfits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.outfit-categories .outfit-lists .bottom-outfits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.outfit-categories .outfit-lists .casual-clothes,
+.outfit-categories .outfit-lists .formal-clothes,
+.outfit-categories .outfit-lists .party-clothes,
+.outfit-categories .outfit-lists .gym-clothes {
+  cursor: pointer;
+}
+.outfit-categories .outfit-lists .casual-clothes:hover,
+.outfit-categories .outfit-lists .formal-clothes:hover,
+.outfit-categories .outfit-lists .party-clothes:hover,
+.outfit-categories .outfit-lists .gym-clothes:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
 .product-section {
   display: flex;
   flex-direction: column;
