@@ -242,55 +242,6 @@
   align-items: center;
 }
 
-.outfit-categories {
-  background-color: rgb(240, 240, 240);
-  padding: 70px 104px;
-  margin: 0 100px;
-  border-radius: 40px;
-}
-.outfit-categories h3 {
-  font-family: "Integral-CF-bold";
-  color: rgb(0, 0, 0);
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-}
-.outfit-categories .outfit-lists {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding-top: 64px;
-}
-.outfit-categories .outfit-lists .top-outfits {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.outfit-categories .outfit-lists .bottom-outfits {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.outfit-categories .outfit-lists .casual-clothes,
-.outfit-categories .outfit-lists .formal-clothes,
-.outfit-categories .outfit-lists .party-clothes,
-.outfit-categories .outfit-lists .gym-clothes {
-  cursor: pointer;
-}
-.outfit-categories .outfit-lists .casual-clothes:hover,
-.outfit-categories .outfit-lists .formal-clothes:hover,
-.outfit-categories .outfit-lists .party-clothes:hover,
-.outfit-categories .outfit-lists .gym-clothes:hover {
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-}
-
 .product-section {
   display: flex;
   flex-direction: column;
@@ -386,6 +337,167 @@
   border-radius: 62px;
   cursor: pointer;
   margin-top: 36px;
+}
+
+.outfit-categories {
+  background-color: rgb(240, 240, 240);
+  padding: 70px 104px;
+  margin: 0 100px;
+  border-radius: 40px;
+}
+.outfit-categories h3 {
+  font-family: "Integral-CF-bold";
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.outfit-categories .outfit-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 64px;
+}
+.outfit-categories .outfit-lists .top-outfits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.outfit-categories .outfit-lists .bottom-outfits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.outfit-categories .outfit-lists .casual-clothes,
+.outfit-categories .outfit-lists .formal-clothes,
+.outfit-categories .outfit-lists .party-clothes,
+.outfit-categories .outfit-lists .gym-clothes {
+  cursor: pointer;
+}
+.outfit-categories .outfit-lists .casual-clothes:hover,
+.outfit-categories .outfit-lists .formal-clothes:hover,
+.outfit-categories .outfit-lists .party-clothes:hover,
+.outfit-categories .outfit-lists .gym-clothes:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.happy-customers {
+  padding: 80px 0;
+}
+.happy-customers .section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.happy-customers .section-title .title {
+  font-family: "Integral-CF-bold";
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: 700;
+  padding-left: 100px;
+}
+.happy-customers .section-title .arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-right: 100px;
+}
+.happy-customers .section-title .arrows img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.happy-customers .section-title .arrows img:hover {
+  transform: scale(1.1);
+}
+.happy-customers .feedback-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.happy-customers .feedback-wrapper::before, .happy-customers .feedback-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.happy-customers .feedback-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 30%, transparent);
+}
+.happy-customers .feedback-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 30%, transparent);
+}
+.happy-customers .feedback-wrapper .feedback-container {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+.happy-customers .feedback-wrapper .feedback-container::-webkit-scrollbar {
+  height: 6px;
+}
+.happy-customers .feedback-wrapper .feedback-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.happy-customers .feedback-wrapper .feedback-container .feedback-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  min-width: 300px;
+  max-width: 350px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.happy-customers .feedback-wrapper .feedback-container .feedback-card:hover {
+  transform: translateY(-5px);
+}
+.happy-customers .feedback-wrapper .feedback-container .feedback-card .rating-stars {
+  font-family: "Satoshi-Variable";
+  color: #facc15;
+  font-size: 20px;
+  font-weight: 700;
+}
+.happy-customers .feedback-wrapper .feedback-container .feedback-card .person-name {
+  font-family: "Satoshi-Variable";
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.happy-customers .feedback-wrapper .feedback-container .feedback-card .text {
+  font-family: "Satoshi-Variable";
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .offers-banner {

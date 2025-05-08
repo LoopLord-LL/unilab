@@ -1,0 +1,109 @@
+.happy-customers {
+  padding: 80px 0;
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include flex-style(row, space-between, center);
+    margin-bottom: 1.5rem;
+
+    .title {
+      @include font-style("Integral-CF-bold", $primary-text-color, 48px, 700);
+      padding-left: 100px;
+    }
+
+    .arrows {
+      @include flex-style(row, center, center);
+      gap: 16px;
+      padding-right: 100px;
+
+      img {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .feedback-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #fff 30%, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #fff 30%, transparent);
+    }
+
+    .feedback-container {
+      display: flex;
+      @include flex-style(row, center, center);
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+      z-index: 1;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+      }
+
+      .feedback-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        padding: 1.5rem;
+        min-width: 300px;
+        max-width: 350px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .rating-stars {
+          @include font-style("Satoshi-Variable", #facc15, 20px, 700);
+        }
+
+        .person-name {
+          @include font-style(
+            "Satoshi-Variable",
+            $primary-text-color,
+            20px,
+            700
+          );
+          @include flex-style(row, flex-start, center);
+          gap: 8px;
+        }
+
+        .text {
+          @include font-style("Satoshi-Variable", $third-text-color, 16px, 400);
+        }
+      }
+    }
+  }
+}
